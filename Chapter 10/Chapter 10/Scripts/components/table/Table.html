@@ -1,0 +1,7 @@
+﻿<div ng-repeat-start="item in todos">
+    <p>{{$index}}, Is odd: {{$odd}}, Is Even: {{$even}}, Is First: {{$first}}, Is Middle: {{$middle}}, Is Last: {{$last}}</p>
+    <p ng-repeat="(prop, vaule) in item">{{prop}}, {{vaule}}, Index is {{$index}}</p>
+</div>
+<p>Hi, I am row: {{$index +1}}</p>
+<p ng-repeat-end>I am an {{$odd?'odd':'even'}} row</p>
+<p>{{tableCtrl.docLoad()}}{{tableCtrl.greetings}}</p>

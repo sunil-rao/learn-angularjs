@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular is Awesome</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="Script/Main.js"></script>
+</head>
+<body ng-app="exampleApp">
+    <div class="container" ng-controller="mainCtrl">
+        <p>{{Greetings}}</p>
+        <p>{{"Sunil" | greetings}}</p>
+        <p user-name="Rahul"></p>
+        <p>Today is {{date}}<p>
+        <p highlight="yellow">{{directiveUsage}}</p>
+    </div>
+</body>
+</html>

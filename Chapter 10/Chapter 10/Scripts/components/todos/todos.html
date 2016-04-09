@@ -1,0 +1,12 @@
+﻿<p class="ng-bind:todos.greetings"></p>
+<p ng-non-bindable>{{todos.greetings}}</p>
+<input type="text" name="greeting" ng-model="todos.greetings" />
+
+<!--<ng-include src="partialViewPath()" onload="docLoad()" autoscroll="false"></ng-include>-->
+
+<div ng-switch on="todos.showToDo">
+    <div ng-switch-when="true">
+        <table todos="todos.todos"></table>
+    </div>
+    <div ng-switch-default>No partial view loaded </div>
+</div>

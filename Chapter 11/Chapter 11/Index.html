@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Angular is awesome</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="Scripts/Main.js"></script>
+</head>
+<body ng-app="exampleApp">
+    <div class="container" ng-controller="mainCtrl">
+        <p class="ng-bind:greetings"></p>
+        <p ng-non-bindable>{{greeting}}</p>
+        <input type="text" name="greeting" ng-model="greetings" />
+
+        <!--<ng-include src="partialViewPath()" onload="docLoad()" autoscroll="false"></ng-include>-->
+        <!--<div ng-switch on="showToDo">
+            <div ng-switch-when="true">
+                <div ng-include="partialViewPath()" onload="docLoad()"></div>
+            </div>
+            <div ng-switch-default>No partial view loaded </div>
+        </div>-->
+
+        <div ng-show="showToDo" ng-mouseover="mouseevents($event)" ng-click="mouseevents($event)">
+            <div ng-include="partialViewPath()" onload="docLoad()"></div>
+        </div>
+        <div ng-hide="showToDo">No partial view loaded </div>
+        <div custom-event-directive>
+            {{message}}
+        </div>
+    </div>
+</body>
+</html>

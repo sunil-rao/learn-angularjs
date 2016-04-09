@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JqLite</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="Scripts/Main.js"></script>
+    <script src="Scripts/directives.js"></script>
+    <script type="text/template" id="listTemplate">
+        <ul>
+            <li ng-repeat="product in data">{{product.Name}}</li>
+        </ul>
+    </script>
+</head>
+<body ng-app="exampleApp">
+    <div ng-controller="mainCtrl">
+        <p>Directive as an attribute</p>
+        <div demo-directive unordered-list="products" list-property="Name"></div>
+        <p>Directive as an element</p>
+
+        <unordered-list demo-directive list-source="products" list-property="Name" some-attribute="hello">
+
+        </unordered-list>
+
+    </div>
+<div ng-controller="scopeCtrl">
+    <p>Directive 1</p>
+    <div scope-demo dataname="{{data.name}}" name="name" expr="complexExpression(data.name)"></div>
+    <p>Directive 2</p>
+    <div scope-demo expr="complexExpression(name)"></div>
+
+    <p>{{name}}</p>
+    <p>{{data.name}}</p>
+</div>
+</body>
+</html>
